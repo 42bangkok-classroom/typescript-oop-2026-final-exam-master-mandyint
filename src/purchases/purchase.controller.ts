@@ -18,13 +18,13 @@ export class PurchaseController {
     return this.purchaseService.findAll();
   }
 
-    @Get('purchases/:id')
-    findOne(@Param('id') id: number) {
-      const data = this.purchaseService.findOne(id);
-      return ({
-        success: true,
-        data: { data },
-        message: "Fetched Purchase Successfully"
-      })
-    }
+  @Get('purchases/:id')
+  findOne(@Param('id') id: number) {
+    const data = this.purchaseService.findOne(id);
+    return {
+      success: true,
+      data: { data },
+      message: 'Fetched Purchase Successfully',
+    };
+  }
 }

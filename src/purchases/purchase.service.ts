@@ -9,17 +9,17 @@ export class PurchaseService {
     return datas;
   }
 
-  findOne(id: number){
-      const file = fs.readFileSync('./data/purchases.json', 'utf-8');
-      const datas: Purchase[] = JSON.parse(file);
-      const userData = [...datas];
-      let result = [];
+  findOne(id: number) {
+    const file = fs.readFileSync('./data/purchases.json', 'utf-8');
+    const datas: Purchase[] = JSON.parse(file);
+    const userData = [...datas];
+    let result = [];
 
-      for(let i = 0; i < userData.length; i++){
-        if(userData[i].id == id){
-          result.push(userData[i]);
-        }
-        return result;
+    for (let i = 0; i < userData.length; i++) {
+      if (userData[i].id == id) {
+        result.push(userData[i]);
       }
+      return result;
+    }
   }
 }
