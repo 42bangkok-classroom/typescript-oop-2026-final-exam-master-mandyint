@@ -1,17 +1,16 @@
-import { Purchase } from "./purchase.interface";
+import { Purchase } from './purchase.interface';
 import * as fs from 'fs';
 
-export class PurchaseService{
-    findAll(): Purchase{
-        const file = fs.readFileSync('./data/purchases.json', 'utf-8');
-        const datas: Purchase = JSON.parse(file);
-        return datas;
-    }
+export class PurchaseService {
+  findAll(): Purchase {
+    const file = fs.readFileSync('./data/purchases.json', 'utf-8');
+    const datas: Purchase = JSON.parse(file);
+    return datas;
+  }
 
-    // findOne(id: number){
-    //     const file = fs.readFileSync('./data/purchases.json', 'utf-8');
-    //     const datas: Purchase[] = JSON.parse(file);
+  // findOne(id: number){
+  //     const file = fs.readFileSync('./data/purchases.json', 'utf-8');
+  //     const datas: Purchase[] = JSON.parse(file);
 
-        
-    // }
+  // }
 }
