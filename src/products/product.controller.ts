@@ -3,17 +3,17 @@ import { ProductService } from './product.service';
 
 @Controller()
 export class ProductController {
-    constructor(private readonly productService: ProductService){}
+  constructor(private readonly productService: ProductService) {}
 
-    @Get('products')
-    findAll(){
-        const user = this.productService.findAll();
-        return ({
-            status: 'success',
-            data: {
-                user,
-            },
-            message: "Fetched products successfully"
-        })
-    }
+  @Get('products')
+  findAll() {
+    const user = this.productService.findAll();
+    return {
+      success: true,
+      data: {
+        user,
+      },
+      message: 'Fetched products successfully',
+    };
+  }
 }
