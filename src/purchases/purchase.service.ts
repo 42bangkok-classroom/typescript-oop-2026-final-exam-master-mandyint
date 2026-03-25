@@ -19,12 +19,12 @@ export class PurchaseService {
     for (let i = 0; i < userData.length; i++) {
       if (userData[i].id == id) {
         result.push(userData[i]);
-      }else{
-        return ({
+      } else {
+        return {
           success: false,
           data: null,
-          message: `Purchase with id ${id} not found`
-        })
+          message: `Purchase with id ${id} not found`,
+        };
       }
       return result;
     }
