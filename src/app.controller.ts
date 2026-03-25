@@ -1,5 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
+import { ApiResponse } from './interfaces/response.interface';
 
 @Controller()
 export class AppController {
