@@ -1,6 +1,5 @@
-import { Controller, Get, HttpStatus } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 import { ProductService } from './product.service';
-import { ApiResponse } from 'src/interfaces/response.interface';
 
 @Controller()
 export class ProductController {
